@@ -41,8 +41,9 @@ let package = Package(
         .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver", from: "1.9.0"),
         .package(url: "https://github.com/passepartoutvpn/openssl-apple", from: "1.1.11500"),
         //.package(name: "WireGuardKit", url: "https://git.zx2c4.com/wireguard-apple", .exact("1.0.15-26"))
+        .package(name: "wg-go-apple", url: "https://github.com/soo20987/wg-go-apple", .exact("master"))
         .package(name: "WireGuardKit", url: "https://github.com/soo20987/wireguard-apple", .exact("master"))
-//        .package(name: "WireGuardKit", url: "https://github.com/passepartoutvpn/wireguard-apple", from: "1.0.16")
+        //.package(name: "WireGuardKit", url: "https://github.com/passepartoutvpn/wireguard-apple", from: "1.0.16")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

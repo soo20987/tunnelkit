@@ -41,7 +41,7 @@ let package = Package(
         .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver", from: "1.9.0"),
         .package(url: "https://github.com/passepartoutvpn/openssl-apple", from: "1.1.11500"),
         //.package(name: "WireGuardKit", url: "https://github.com/soo20987/wireguard-apple", .exact("1.0.15-26"))
-        .package(name: "WireGuardKit", url: "https://github.com/soo20987/wireguard-apple", from: "1.0.6-27")
+        .package(name: "WireGuardKit", url: "https://github.com/soo20987/wireguard-apple", from: "1.0.16-27")
 //        .package(name: "WireGuardKit", url: "https://github.com/passepartoutvpn/wireguard-apple", from: "1.0.16")
     ],
     targets: [

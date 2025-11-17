@@ -20,7 +20,7 @@
         }
       },
       {
-        "package": "SwiftyBeaver",
+        "package": "wg-go-apple",
         "repositoryURL": "https://github.com/soo20987/wg-go-apple",
         "state": {
           "branch": "master",

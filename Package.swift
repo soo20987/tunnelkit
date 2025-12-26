@@ -40,7 +40,7 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver", from: "1.9.0"),
         //.package(url: "https://github.com/soo20987/openssl-apple", .branch("master")),
-        .package(url: "https://github.com/krzyzanowskim/OpenSSL", exact("3.6.0001")),
+        .package(url: "https://github.com/krzyzanowskim/OpenSSL", .exact("3.6.0001")),
         //.package(url: "https://github.com/x2on/OpenSSL-for-iPhone.git", from: "1.1.1v"),
         .package(url: "https://github.com/soo20987/wg-go-apple", .branch("master")),
         //.package(name: "WireGuardKit", url: "https://git.zx2c4.com/wireguard-apple", .exact("1.0.15-26"))

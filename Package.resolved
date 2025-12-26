@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "openssl-apple",
-        "repositoryURL": "https://github.com/soo20987/openssl-apple",
-        "state": {
-          "branch": "master",
-          "revision": "1c03f4d3fc1d90a0a525af68f06eada56e5e8bb1",
-          "version": null
-        }
-      },
-      {
         "package": "SwiftyBeaver",
         "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver",
         "state": {

@@ -454,9 +454,14 @@ extension OpenVPN {
                 Regex.compress.enumerateArguments(in: line) {
                     isHandled = true
                     optCompressionFraming = .compress
+                    
                     if let arg = $0.first {
                         switch arg {
                         case "lzo":
+                            if !LZOFactory.isSupported() {                        
+                                unsupportedError = .unsupportedConfiguration(option: line)
+                                return
+                            } 
                             optCompressionAlgorithm = .LZO
                             
                         case "stub":

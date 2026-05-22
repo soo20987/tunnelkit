@@ -454,31 +454,27 @@ extension OpenVPN {
                 Regex.compress.enumerateArguments(in: line) {
                     isHandled = true
                     optCompressionFraming = .compress
-                    
-                    if !LZOFactory.isSupported() {
-                        guard $0.isEmpty else {
-                            unsupportedError = .unsupportedConfiguration(option: line)
-                            return
+                    if let arg = $0.first {
+                        switch arg {
+                        case "lzo":
+                            optCompressionAlgorithm = .LZO
+                            
+                        case "stub":
+                            optCompressionAlgorithm = .disabled
+                            
+                        case "stub-v2":
+                            optCompressionFraming = .compressV2
+                            optCompressionAlgorithm = .disabled
+
+                        default:
+                            if !LZOFactory.isSupported() {                        
+                                unsupportedError = .unsupportedConfiguration(option: line)
+                                return
+                            }                        
+                            optCompressionAlgorithm = .other
                         }
                     } else {
-                        if let arg = $0.first {
-                            switch arg {
-                            case "lzo":
-                                optCompressionAlgorithm = .LZO
-                                
-                            case "stub":
-                                optCompressionAlgorithm = .disabled
-                                
-                            case "stub-v2":
-                                optCompressionFraming = .compressV2
-                                optCompressionAlgorithm = .disabled
-
-                            default:
-                                optCompressionAlgorithm = .other
-                            }
-                        } else {
-                            optCompressionAlgorithm = .disabled
-                        }
+                        optCompressionAlgorithm = .disabled
                     }
                 }
                 Regex.keyDirection.enumerateArguments(in: line) {
